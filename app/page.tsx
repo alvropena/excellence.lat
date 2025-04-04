@@ -351,7 +351,7 @@ export default function Home() {
         timeZone: "America/Lima",
         hour: "2-digit",
         minute: "2-digit",
-        hour12: true,
+        hour12: false, // Use 24-hour format
       });
       setCurrentTime(timeStr);
     };
@@ -369,8 +369,11 @@ export default function Home() {
       <SkyBackground />
       <div className="fixed w-full h-full flex flex-col justify-between p-8 text-white font-light">
         <div className="flex justify-between w-full">
-          <div className="text-lg font-bold">Latino Excellence</div>
-          <div className="text-lg hover:underline cursor-pointer font-bold">
+          {/* Empty top row */}
+        </div>
+        <div className="flex justify-between w-full">
+          <div className="text-lg font-bold hover:underline cursor-pointer">projects</div>
+          <div className="text-lg font-bold">
             {currentTime}
           </div>
         </div>
